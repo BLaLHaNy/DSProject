@@ -1,4 +1,11 @@
 #pragma once
+#pragma once
+#include "PriQueue.h"
+#include <iostream>
+
+using namespace std;
+
+
 
 
 template < typename T>
@@ -99,3 +106,4 @@ public:
         return head == nullptr;
     }
 };
+

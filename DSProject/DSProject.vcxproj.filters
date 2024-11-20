@@ -15,11 +15,34 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="PriQueue.cpp">
-      <Filter>Header Files</Filter>
+    <ClCompile Include="LinkedQueue1.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="LinkedQueue.cpp">
-      <Filter>Header Files</Filter>
+    <ClCompile Include="HPC.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Organizer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="LinkedQueue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PriQueue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HPC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Organizer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

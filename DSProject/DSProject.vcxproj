@@ -127,8 +127,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="PriQueue.cpp" />
-    <ClCompile Include="LinkedQueue.cpp" />
+    <ClCompile Include="HPC.cpp" />
+    <ClCompile Include="LinkedQueue1.cpp" />
+    <ClCompile Include="Organizer.cpp" />
+    <ClCompile Include="UI.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="HPC.h" />
+    <ClInclude Include="LinkedQueue.h" />
+    <ClInclude Include="Organizer.h" />
+    <ClInclude Include="PriQueue.h" />
+    <ClInclude Include="UI.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

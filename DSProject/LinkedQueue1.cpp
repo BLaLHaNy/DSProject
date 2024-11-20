@@ -1,62 +1,5 @@
-
-/*
-This is a program that implements the queue abstract data type using a linked list.
-The queue is implemented as a chain of linked nodes that has two pointers,
-a frontPtr pointer for the front of the queue and a backPtr pointer for the back of the queue.
-*/
-
-/*
-
-				The Node: item of type T and a "next" pointer
-					-------------
-					| item| next | --->
-					-------------
-General Queue case:
-
-				 frontPtr																backPtr
-					\											   						/
-					 \											  					   /
-					------------- 	  ------------- 	  ------------- 	  -------------
-					| item| next |--->| item| next |--->  | item| next |--->  | item| next |---> NULL
-					------------- 	  ------------- 	  ------------- 	  -------------
-
-Empty Case:
-
-				 frontptr	 backptr
-						\	 /
-						 \	/
-					---- NULL ------
-
-
-Single Node Case:
-				 frontPtr	 backPtr
-					\		/
-					 \	   /
-					-----------
-					|item| next| -->NULL
-					-----------
-
-*/
-
-#ifndef LINKED_QUEUE_
-#define LINKED_QUEUE_
-
-template < typename T>
-class Node
-{
-private:
-	T item; // A data item
-	Node<T>* next; // Pointer to next node
-public:
-	Node();
-	Node(const T& r_Item);
-	Node(const T& r_Item, Node<T>* nextNodePtr);
-	void setItem(const T& r_Item);
-	void setNext(Node<T>* nextNodePtr);
-	T getItem() const;
-	Node<T>* getNext() const;
-}; // end Node
-
+#include "LinkedQueue.h"
+ 
 template < typename T>
 Node<T>::Node()
 {
@@ -100,34 +43,6 @@ Node<T>* Node<T>::getNext() const
 	return next;
 }
 
-
-
-
-template <typename T>
-class LinkedQueue
-{
-private:
-
-	Node<T>* backPtr;
-	Node<T>* frontPtr;
-public:
-	LinkedQueue();
-	bool isEmpty() const;
-	bool enqueue(const T& newEntry);
-	bool dequeue(T& frntEntry);
-	bool peek(T& frntEntry)  const;
-	~LinkedQueue();
-
-	//copy constructor
-	LinkedQueue(const LinkedQueue<T>& LQ);
-};
-/////////////////////////////////////////////////////////////////////////////////////////
-
-/*
-Function: Queue()
-The constructor of the Queue class.
-
-*/
 
 template <typename T>
 LinkedQueue<T>::LinkedQueue()
@@ -256,5 +171,4 @@ LinkedQueue<T>::LinkedQueue(const LinkedQueue<T>& LQ)
 	}
 }
 
-#endif
 
