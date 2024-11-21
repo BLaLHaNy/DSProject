@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
-
+#include "PriQueue.h"
+ 
 using namespace std;
 
 #ifndef LINKED_QUEUE_
@@ -56,7 +57,7 @@ public:
 };
 
 template <typename T>
-class PriQueueCancel : public priQueue<T>
+class PriQueueCancel : public priQueue <T>
 {
 
 public:
