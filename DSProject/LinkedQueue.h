@@ -15,7 +15,7 @@ private:
 	T item; // A data item
 	Node<T>* next; // Pointer to next node
 public:
-	Node s
+	
 	Node();
 	Node(const T& r_Item);
 	Node(const T& r_Item, Node<T>* nextNodePtr);
