@@ -19,11 +19,28 @@
 //}
 Organizer::Organizer(const string& fname)
 {
-	
+	timestep = 0;
+	store(fname);
 }
 void Organizer::store(const string& fname)
 {
 
+}
+LinkedQueue<Patient*> Organizer::getdone()
+{
+	return DonePatients;
+}
+LinkedQueue<Patient*> Organizer::getcanceeled()
+{
+	return Cancellationlist;
+}
+LinkedQueue<Patient*> Organizer::getallpatients()
+{
+	return AllPatients;
+}
+Hospital** Organizer::gethospitallist()
+{
+	return Hospitals;
 }
 Organizer::~Organizer() {
 	for (int i = 0; i < NoHp; i++)

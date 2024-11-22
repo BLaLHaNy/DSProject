@@ -26,10 +26,10 @@ public:
 	
 	Organizer(const string& fname);
 	void store(const string& fname);
-	//get finished
-	//getcanceeled
-	//getallpatients
-	//gethospital list
+	LinkedQueue<Patient*> getdone();
+	LinkedQueue<Patient*> getcanceeled();
+	LinkedQueue<Patient*> getallpatients();
+	Hospital** gethospitallist() ;
 	~Organizer();
 
 };

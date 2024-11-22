@@ -29,10 +29,13 @@ void Hospital::setCars(Car* c)
 
 }
 
-
-void Hospital::assigncar()
+void Hospital::assigncar(Patient* P,Car* C)
 {
+	C->setAP(P);
 }
+
+
+
 Car::Car(string t, int s) :type(t), speed(s) {}
 
 string Car::gettype() const {
@@ -40,20 +43,32 @@ string Car::gettype() const {
 }
 void Car::Pickup()
 {
+	setstatus("BusyCar");
+
+}
+int Car::getspeed()
+{
+	return speed;
+}
+void Car::setAP(Patient* AP)
+{
+	AssignedPatient = AP;
 }
 void Car::dropoff()
 {
+	setstatus("FreeCar");
 }
-void Car::setspeed(Car* c)
-{
-	if (c->gettype() == "NC") {
-		;
-	}
-	else if (c->gettype() == "SC") {
-		SC.enqueue(c);
-	}
 
+void Car::setstatus(string s)
+{
+	status = s;
 }
+
+Patient* Car::getAP()
+{
+	return AssignedPatient;
+}
+
 Patient::Patient(int id, string t, int hid, int sev = 1) :ID(id), ptType(t), HID(hid), severity(sev) {}
 int Patient::getsev() const
 {
