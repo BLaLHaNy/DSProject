@@ -9,12 +9,28 @@ using namespace std;
 
 class Organizer
 {
+
 private:
-	LinkedQueue<Patient>* AllPatients;
-	LinkedQueue<Patient>* Cancellationlist;
-	PriQueueReturn<Car>* OutCar;
-	priQueue<Car>* BackCar;
+	LinkedQueue<Patient*> AllPatients;
+	LinkedQueue<Patient*> Cancellationlist;
+	LinkedQueue<Patient*> DonePatients;
+	PriQueueReturn<Car*> OutCar;
+	priQueue<Car*> BackCar;
+	int NoHp;
+	int** distance;
+	Hospital** Hospitals = new Hospital * [NoHp];
+	int timestep;
+
+
+public:
 	
+	Organizer(const string& fname);
+	void store(const string& fname);
+	//get finished
+	//getcanceeled
+	//getallpatients
+	//gethospital list
+	~Organizer();
 
 };
 
