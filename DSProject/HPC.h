@@ -4,7 +4,7 @@
 using namespace std;
 
 #include "LinkedQueue.h"
-#include "priQueue.h"
+#include "PriQueue.h"
 
 class Patient
 {
@@ -21,7 +21,7 @@ public:
 
 };
 
-class Hospital
+class Car
 {
 private:
 	int HID;
@@ -39,7 +39,7 @@ public:
 	void assigncar();
 };
 
-class Car
+class Hospital
 {
 private:
 	Patient* AssignedPatient;

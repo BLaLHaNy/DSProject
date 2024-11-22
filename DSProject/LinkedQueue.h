@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
-
+#include "PriQueue.h"
+ 
 using namespace std;
 
 #ifndef LINKED_QUEUE_
@@ -15,6 +16,7 @@ private:
 	T item; // A data item
 	Node<T>* next; // Pointer to next node
 public:
+	
 	Node();
 	Node(const T& r_Item);
 	Node(const T& r_Item, Node<T>* nextNodePtr);
@@ -55,7 +57,7 @@ public:
 };
 
 template <typename T>
-class PriQueueCancel : public priQueue<T>
+class PriQueueCancel : public priQueue <T>
 {
 
 public:
