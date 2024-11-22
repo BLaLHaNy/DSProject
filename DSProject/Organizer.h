@@ -25,7 +25,7 @@ private:
 public:
 	
 	Organizer(const string& fname);
-	void store(const string& fname);
+	void store(const string& fname);//not done yet
 	LinkedQueue<Patient*> getdone();
 	LinkedQueue<Patient*> getcanceeled();
 	LinkedQueue<Patient*> getallpatients();

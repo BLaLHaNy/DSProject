@@ -21,7 +21,8 @@ public:
 
 };
 
-class Car
+
+class Hospital
 {
 private:
 	int HID;
@@ -36,24 +37,31 @@ public:
 	Hospital(int hid);
 	void setPatients(Patient* p);
 	void setCars(Car* p);
-	void assigncar();
+	void assigncar(Patient* P, Car* c);//not done yet
 };
 
-class Hospital
+
+class Car
 {
 private:
 	Patient* AssignedPatient;
 	string type;
 	int speed;
-	string status="RC";
+	string status="FreeCar";
 public:
 	Car(string t, int s);
 	string gettype() const;
-	void Pickup();
-	int getspeed(); //set status char// set AP
-	void dropoff();
-	void setspeed(Car*c);
-	//getAP patient
+	void Pickup();//not done yet
+	int getspeed(); 
+	void setAP(Patient* AP);
+	void dropoff();//not done yet
+	void setstatus(string s);
+	Patient* getAP();
+	/*void setspeed(Car*c);*/
 };
+
+
+
+
 
 
